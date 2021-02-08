@@ -6,7 +6,7 @@
 /*   By: khermann <khermann@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 08:36:14 by khermann          #+#    #+#             */
-/*   Updated: 2020/11/21 19:24:44 by khermann         ###   ########.fr       */
+/*   Updated: 2021/02/08 22:01:40 by khermann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ char	*ft_strdup(const char *src)
 	i = 0;
 	while (src[i] != '\0')
 		i++;
-	str = (char*)malloc(i + 1);
-	if (str == NULL)
-		return (NULL);
+	if (!(str = (char*)malloc(i + 1)))
+		return (0);
 	i = 0;
 	while (src[i] != '\0')
 	{
