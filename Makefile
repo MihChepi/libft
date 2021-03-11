@@ -6,15 +6,15 @@
 #    By: khermann <khermann@21-school.ru>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/31 04:06:51 by khermann          #+#    #+#              #
-#    Updated: 2020/11/30 14:47:27 by khermann         ###   ########.fr        #
+#    Updated: 2021/03/11 12:56:30 by khermann         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	libft.a
 
-CFLAGS =	-Wall -Wextra -Werror -I.
+CC = gcc
 
-CC =	gcc ${CFLAGS}
+CFLAGS = -Wall -Wextra -Werror -I.
 
 SRC =	ft_memset.c\
 		ft_bzero.c\
@@ -69,16 +69,20 @@ HEADER =	libft.h
 
 all:		${NAME}
 
-$(NAME):	${OBJ}
+$(NAME):	${OBJ} 
 			ar rc $(NAME) ${OBJ}
 			ranlib $(NAME)
 
-bonus:		${OBJ} ${OBJBONUS}
+bonus:		$(NAME)
+	
+			${OBJ} ${OBJBONUS}
 			ar rc $(NAME) ${OBJ} ${OBJBONUS}
 			ranlib $(NAME)
 
-so:		 ${OBJ} ${OBJBONUS}
-		gcc -shared -o libft.so  ${OBJ} ${OBJBONUS}
+#daynamic library
+so:			 ${OBJ} ${OBJBONUS}
+			gcc -shared -o libft.so  ${OBJ} ${OBJBONUS}
+
 clean:
 			rm -f ${OBJ} ${OBJBONUS}
 
@@ -87,4 +91,4 @@ fclean:		clean
 
 re: 		fclean all
 
-.PHONY:		re fclean clean all ${NAME}
+.PHONY:		re fclean clean all
