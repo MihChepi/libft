@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khermann <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/17 18:27:41 by khermann          #+#    #+#             */
+/*   Updated: 2021/03/17 18:27:42 by khermann         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-float    ft_atof(char *str)
+float		ft_atof(char *str)
 {
-	float  atof;
-	int    atoi;
-	int    i;
-	int    fac;
+	float	atof;
+	int		atoi;
+	int		i;
+	int		fac;
 
 	fac = 1;
 	atof = 0;
