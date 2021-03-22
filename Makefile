@@ -73,9 +73,7 @@ $(NAME):	${OBJ}
 			ar rc $(NAME) ${OBJ}
 			ranlib $(NAME)
 
-bonus:		$(NAME)
-	
-			${OBJ} ${OBJBONUS}
+bonus:		$(NAME) ${OBJ} ${OBJBONUS}
 			ar rc $(NAME) ${OBJ} ${OBJBONUS}
 			ranlib $(NAME)
 
