@@ -31,10 +31,13 @@ SRC =	ft_memset.c\
 		ft_strnstr.c\
 		ft_strncmp.c\
 		ft_atoi.c\
+		ft_atof.c\
 		ft_isalpha.c\
 		ft_isdigit.c\
 		ft_isalnum.c\
 		ft_isascii.c\
+		ft_isspace.c\
+		ft_intlen.c\
 		ft_isprint.c\
 		ft_toupper.c\
 		ft_tolower.c\
@@ -43,6 +46,7 @@ SRC =	ft_memset.c\
 		ft_substr.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
+		ft_strcmp.c\
 		ft_split.c\
 		ft_itoa.c\
 		ft_strmapi.c\
