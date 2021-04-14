@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == c)
 		{
-			chr = (char*)&s[i];
+			chr = (char *)&s[i];
 			f = 1;
 		}
 		i++;

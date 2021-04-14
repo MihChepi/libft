@@ -16,9 +16,16 @@ char	*ft_empty(void)
 {
 	char	*str;
 
-	str = malloc(sizeof(char*));
+	str = malloc(sizeof(char *));
 	str[0] = '\0';
 	return (str);
+}
+
+int	ft_strtrim_lenstr(const char *s1, int i)
+{
+	while (s1[i + 1])
+		i++;
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -36,12 +43,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1[i])
 		return (ft_empty());
 	start = i;
-	while (s1[i + 1])
-		i++;
+	i = ft_strtrim_lenstr(s1, i);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i--;
 	end = i;
-	if (!(str = malloc(sizeof(char) * (end - start + 2))))
+	str = malloc(sizeof(char) * (end - start + 2));
+	if (!str)
 		return (0);
 	i = 0;
 	while (start <= end)

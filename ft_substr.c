@@ -34,9 +34,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= i)
 		return (ft_outside());
 	if (len >= (i - start))
-		str = (char*)malloc(i - start + 1);
+		str = (char *)malloc(i - start + 1);
 	else
-		str = (char*)malloc(len + 1);
+		str = (char *)malloc(len + 1);
 	if (str == 0)
 		return (0);
 	i = 0;

@@ -12,19 +12,23 @@
 
 #include "libft.h"
 
-int		ft_size(int a)
+int	ft_size(int a)
 {
 	int		size;
 
 	size = 1;
 	if (a < 0)
 		a = a * -1;
-	while ((a = a / 10) >= 1)
+	a = a / 10;
+	while (a >= 1)
+	{
 		size++;
+		a = a / 10;
+	}
 	return (size);
 }
 
-int		ft_power(int n)
+int	ft_power(int n)
 {
 	int	i;
 

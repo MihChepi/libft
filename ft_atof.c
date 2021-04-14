@@ -12,22 +12,32 @@
 
 #include "libft.h"
 
-float		ft_atof(char *str)
+int	minus(char *str, int i)
+{
+	int	fac;
+
+	fac = 1;
+	if (str[i] == '-')
+		fac = -1;
+	return (fac);
+}
+
+float	ft_atof(char *str)
 {
 	float	atof;
 	int		atoi;
 	int		i;
 	int		fac;
 
-	fac = 1;
 	atof = 0;
 	i = 0;
 	while (ft_isspace(str[i]))
 		i++;
-	str[i] == '-' ? fac = -1 : 0;
+	fac = minus(str, i);
 	atoi = ft_atoi(str);
 	i += ft_intlen(atoi);
-	fac == -1 ? i++ : 0;
+	if (fac == -1)
+		i++;
 	if (str[i] != '.')
 		return (atoi);
 	i++;

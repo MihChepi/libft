@@ -23,5 +23,5 @@ void	*ft_calloc(size_t number, size_t size)
 		return (NULL);
 	while (i > 0)
 		s[(i--) - 1] = 0;
-	return ((void*)s);
+	return ((void *)s);
 }

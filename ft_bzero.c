@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *dest;
+	unsigned char	*dest;
 
-	dest = (unsigned char*)s;
+	dest = (unsigned char *)s;
 	while (n > 0)
 		dest[(n--) - 1] = 0;
 }

@@ -19,17 +19,17 @@ char	*ft_strnstr(const char *big, const char *str, size_t len)
 
 	n = 0;
 	if (ft_strlen(big) < ft_strlen(str)
-	|| len < ft_strlen(str))
+		|| len < ft_strlen(str))
 		return (0);
 	if (str[0] == '\0')
-		return ((char*)&big[0]);
+		return ((char *)&big[0]);
 	len_str = ft_strlen(str);
 	while (big[n] != '\0' && n < len)
 	{
 		if (big[n] == str[0] && ((n + len_str) <= len))
 		{
 			if (ft_strncmp(&big[n], str, len_str) == 0)
-				return ((char*)&big[n]);
+				return ((char *)&big[n]);
 		}
 		n++;
 	}
