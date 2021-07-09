@@ -11,7 +11,7 @@
  **************************************************************************** 
 
 ## Discription
-Project from ecole42. 
+Project from ecole42. I write C-function from standart library.
 
 
 ## Tests
