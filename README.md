@@ -10,9 +10,9 @@
                                                                               
  **************************************************************************** 
 
-# Discription
+## Discription
 Project from ecole42. 
 
 
-# Tests
+## Tests
 [unut-test](https://github.com/alelievr/libft-unit-test.git)
